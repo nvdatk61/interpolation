@@ -25,6 +25,7 @@ class Newton:
             c = [0 for _ in range(self.n)]
             w = [0 for _ in range(self.n)]
 
+
             for i in range (0, self.n):
                 #print(i)
                 w[i]=self.Y[i]
@@ -35,6 +36,7 @@ class Newton:
             s = c[self.n-1]
             for i in reversed(range(self.n)):
                 s = s * (t -self.X[i])+c[i]
+            #print(c)
             return s
         except Exception as e:
             raise
